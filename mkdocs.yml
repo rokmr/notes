@@ -23,20 +23,29 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - def_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: materialx.emoji.twemoji
+      emoji_generator: materialx.emoji.to_svg
   - md_in_html
   - admonition
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - toc:
+      permalink: true
+      toc_depth: 3
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -49,4 +58,18 @@ extra_css:
 
 plugins:
   - search
-  - tags 
+  - tags
+  - mermaid2
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rokmr/notes
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY 
