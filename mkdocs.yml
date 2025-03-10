@@ -9,14 +9,13 @@ theme:
     primary: blue
     accent: light blue
   features:
-    - navigation.instant
+    - content.code.copy
     - navigation.tracking
+    - navigation.indexes
+    - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.code.copy
-    - toc.follow
-    - toc.integrate
   font:
     text: Roboto
     code: Roboto Mono
