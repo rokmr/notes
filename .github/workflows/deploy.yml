@@ -17,10 +17,7 @@ env:
   PYTHON_VERSION: '3.x'
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,14 +26,30 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material
           pip install -r requirements.txt
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
       - name: Build
         run: mkdocs build
-      - name: Deploy
-        uses: actions/deploy-pages@v4 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages 
