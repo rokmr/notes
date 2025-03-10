@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# notes
-=======
 # Personal Notes Site
 
 A minimalist, GitHub Pages-based note-taking system built with MkDocs.
@@ -31,4 +28,3 @@ A minimalist, GitHub Pages-based note-taking system built with MkDocs.
 - Mobile-friendly design
 
 ## Directory Structure 
->>>>>>> 6c90b31 (Initial commit)
