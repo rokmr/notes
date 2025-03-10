@@ -1,5 +1,8 @@
 site_name: Notes
-site_url: https://rokmr.github.io/notes
+site_url: https://rokmr.github.io/notes/
+repo_url: https://github.com/rokmr/notes
+repo_name: rokmr/notes
+
 theme:
   name: material
   palette:
