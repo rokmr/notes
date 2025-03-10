@@ -1,6 +1,24 @@
 # Welcome to My Notes
 
-This is a personal knowledge base built with MkDocs and hosted on GitHub Pages.
+## Categories
+
+### Getting Started
+- [Introduction to Notes](getting-started/introduction.md)
+- [Basic Features](getting-started/features.md)
+- [Writing Guide](getting-started/writing-guide.md)
+
+### Math Notes
+- [Sample Math Note](math/sample.md)
+- [Calculus Basics](math/calculus.md)
+
+### Code Examples
+- [Python Snippets](code/python.md)
+- [JavaScript Examples](code/javascript.md)
+
+### Media Examples
+- [Image Handling](media/images.md)
+- [Video Integration](media/video.md)
+- [Document Embedding](media/documents.md)
 
 ## Features
 
@@ -10,10 +28,4 @@ This is a personal knowledge base built with MkDocs and hosted on GitHub Pages.
 - 🏷️ Tag-based organization
 - 🔍 Powerful search functionality
 - 💬 Comments via Giscus
-- 📱 Mobile-friendly
-
-## Recent Notes
-
-- [Getting Started](categories/getting-started.md)
-- [Sample Math Note](categories/math/sample.md)
-- [Code Examples](categories/code/examples.md) 
+- 📱 Mobile-friendly 

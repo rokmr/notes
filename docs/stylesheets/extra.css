@@ -32,4 +32,41 @@ img {
 
 .gif-wrapper img:hover {
     cursor: pointer;
+}
+
+/* Make TOC resizable */
+.md-sidebar--primary {
+  border-right: 1px solid var(--md-default-fg-color--lightest);
+  resize: horizontal;
+  min-width: 200px;
+  max-width: 600px;
+  overflow: auto;
+}
+
+/* Improve TOC styling */
+.md-nav {
+  font-size: 0.7rem;
+}
+
+.md-nav__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.md-nav__link {
+  padding: 0.2rem 0;
+}
+
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Adjust main content area */
+.md-content {
+  max-width: none;
+}
+
+/* Remove navigation tabs since we're using categories in main content */
+.md-tabs {
+  display: none;
 } 

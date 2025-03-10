@@ -9,12 +9,17 @@ theme:
     primary: blue
     accent: light blue
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.follow
+    - toc.integrate
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 markdown_extensions:
   - footnotes
