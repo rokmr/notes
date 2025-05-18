@@ -45,6 +45,7 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
 
+
   language: en
   palette:
     - scheme: default
@@ -62,11 +63,15 @@ theme:
 
 nav:
   - Home: index.md
-  - Machine Learning: ml/index.md
+  - Machine Learning: 
+    - Machine Learning: ml/index.md
+    - Linear Regression: ml/LinearRegression.md
+    - Logistic Regression: ml/LogisticRegression.md
+    - Naive Bayes: ml/NaiveBayes.md
   - Computer Vision: 
-    - Intro: cv/index.md
+    - Computer Vision: cv/index.md
     - Object Detection: 
-      - Overview: cv/detection/index.md
+      - Object Detection: cv/detection/index.md
       - Selective Search: cv/detection/SelectiveSearch.md
       - Overfeat: cv/detection/Overfeat.md 
       - RCNNs: cv/detection/RCNN.md
@@ -78,20 +83,21 @@ nav:
       - DETR: cv/detection/DETR.md
       - YOLO-World: cv/detection/YOLO-World.md
     - Face Detection: 
-      - Overview: cv/faceDetection/index.md
+      - Face Detection: cv/faceDetection/index.md
     - Pose Estimation:
-      - Overview: cv/poseEstimation/index.md
+      - Pose Estimation: cv/poseEstimation/index.md
     - Image Segmentation:
-      - Overview: cv/segmentation/index.md
+      - Image Segmentatio: cv/segmentation/index.md
       - DIS: cv/segmentation/DIS.md
       - BiRefNet: cv/segmentation/BiRefNet.md 
     - Optical Flow: 
-      - Overview: cv/opticalFlow/index.md
+      - Optical Flow: cv/opticalFlow/index.md
     - Object Tracking:
-      - Overview: cv/objectTracking/index.md 
+      - Object Tracking: cv/objectTracking/index.md 
     - NeRF:
-      - Overview: cv/nerf/index.md
-  - Natural Language Processing: nlp/index.md
+      - NeRF: cv/nerf/index.md
+  - Natural Language Processing:
+    - Natural Language Processing: nlp/index.md
 
 extra_css:
   - stylesheets/extra.css
@@ -107,11 +113,11 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - glightbox
   - mkdocs-video
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      include: ["*.ipynb"]  # Process all notebook files
   - minify:
       minify_html: true
-
-
+  - macros
 
 extra:
   social:
@@ -149,3 +155,5 @@ markdown_extensions:
 
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true

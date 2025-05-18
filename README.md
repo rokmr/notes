@@ -13,9 +13,5 @@ mkdocs new my-project
 cd my-project
 mkdocs serve
 mkdocs build
+mkdocs gh-deploy --force
 ```
-
-```bash
- # theme
- pip install mkdocs-dracula-theme
- ```

@@ -1,3 +1,5 @@
+# NeRF Video
+
 <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe 
     src="https://www.youtube.com/embed/Wl9NQ9trVm0"
@@ -10,3 +12,7 @@
   </iframe>
 </div>
 
+## :octicons-code-24: Code 
+
+{% set repo_path = 'rokmr/Computer-Vision/blob/main/src/colab/NeRF.ipynb' %}
+{% include 'snippets/notebook.html' %}
