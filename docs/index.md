@@ -1,31 +1,21 @@
-# Welcome to My Notes
+# Notes
 
-## Categories
 
-### Getting Started
-- [Introduction to Notes](getting-started/introduction.md)
-- [Basic Features](getting-started/features.md)
-- [Writing Guide](getting-started/writing-guide.md)
+## Explore and star on GitHub
 
-### Math Notes
-- [Sample Math Note](math/sample.md)
-- [Calculus Basics](math/calculus.md)
+<div class="grid cards" markdown>
 
-### Code Examples
-- [Python Snippets](code/python.md)
-- [JavaScript Examples](code/javascript.md)
+- [:fontawesome-brands-github: __rokmr/kick-start-ai__](https://github.com/rokmr/kick-start-ai)
 
-### Media Examples
-- [Image Handling](media/images.md)
-- [Video Integration](media/video.md)
-- [Document Embedding](media/documents.md)
+- [:fontawesome-brands-github: __rokmr/machine-learning__](https://github.com/rokmr/machine-learning)
 
-## Features
+- [:fontawesome-brands-github: __rokmr/computer-vision__](https://github.com/rokmr/computer-vision)
 
-- 📝 Full Markdown support
-- ⚡ LaTeX math equations
-- 🎨 Syntax highlighting for code
-- 🏷️ Tag-based organization
-- 🔍 Powerful search functionality
-- 💬 Comments via Giscus
-- 📱 Mobile-friendly 
+- [:fontawesome-brands-github: __rokmr/notes__](https://github.com/rokmr/notes)
+
+</div>
+
+
+
+
+

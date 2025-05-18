@@ -1,79 +1,151 @@
-site_name: Notes
+site_name: AI Notes
 site_url: https://rokmr.github.io/notes/
-repo_url: https://github.com/rokmr/notes
+site_author: Rohit Kumar
+site_description: Notes for Artificial Intelligence
+
 repo_name: rokmr/notes
+repo_url: https://github.com/rokmr/notes
+
+copyright: Copyright &copy; 2025 Rohit Kumar
 
 theme:
   name: material
-  palette:
-    primary: blue
-    accent: light blue
   features:
-    - content.code.copy
-    - navigation.tracking
     - navigation.indexes
-    - toc.integrate
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.expand
+    # - navigation.sections
     - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
     - search.suggest
     - search.highlight
-  font:
-    text: Roboto
-    code: Roboto Mono
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+  icon:
+    logo: material/book-open
+    navigation:
+      Home: material/home
+      Basic: material/book-open-page-variant
+      Machine Learning: material/robot
+      Computer Vision: material/camera
+      Natural Language Processing: material/text-recognition
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue
+      accent: lime
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode    
+      primary: custom
+      accent: lime
+
+nav:
+  - Home: index.md
+  - Machine Learning: ml/index.md
+  - Computer Vision: 
+    - Intro: cv/index.md
+    - Object Detection: 
+      - Overview: cv/detection/index.md
+      - Selective Search: cv/detection/SelectiveSearch.md
+      - Overfeat: cv/detection/Overfeat.md 
+      - RCNNs: cv/detection/RCNN.md
+      - YOLO: cv/detection/YOLO.md
+      - RetinaNet: cv/detection/RetinaNet.md
+      - CornerNet: cv/detection/CornerNet.md
+      - CenterNet: cv/detection/CenterNet.md
+      - ExtremeNet: cv/detection/ExtremeNet.md
+      - DETR: cv/detection/DETR.md
+      - YOLO-World: cv/detection/YOLO-World.md
+    - Face Detection: 
+      - Overview: cv/faceDetection/index.md
+    - Pose Estimation:
+      - Overview: cv/poseEstimation/index.md
+    - Image Segmentation:
+      - Overview: cv/segmentation/index.md
+      - DIS: cv/segmentation/DIS.md
+      - BiRefNet: cv/segmentation/BiRefNet.md 
+    - Optical Flow: 
+      - Overview: cv/opticalFlow/index.md
+    - Object Tracking:
+      - Overview: cv/objectTracking/index.md 
+    - NeRF:
+      - Overview: cv/nerf/index.md
+  - Natural Language Processing: nlp/index.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
+plugins:
+  - social
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - glightbox
+  - mkdocs-video
+  - mkdocs-jupyter
+  - minify:
+      minify_html: true
+
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/rokmr
+    - icon: fontawesome/solid/envelope
+      link: mailto:sahil15rohit88@gmail.com
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rohitronie/
+    - icon: fontawesome/solid/globe
+      link: https://rokmr.github.io
+
 
 markdown_extensions:
-  - footnotes
-  - attr_list
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - admonition
+  - tables
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
   - def_list
+  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - md_in_html
-  - admonition
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-  - toc:
-      permalink: true
-      toc_depth: 3
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - javascripts/media.js
-
-extra_css:
-  - stylesheets/extra.css
-
-plugins:
-  - search
-  - tags
-  - mermaid2
-  - glightbox
-  - git-revision-date-localized:
-      enable_creation_date: true
-  - minify:
-      minify_html: true
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/rokmr/notes
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY 
+  - pymdownx.tasklist:
+      custom_checkbox: true
