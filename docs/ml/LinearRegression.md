@@ -44,6 +44,25 @@ prediction.
 
 $y = \sum_{i}w_ix_i + b$
 
+## Question
+
+??? question "Why linear regression is called linear?"
+    - The relationship between the independent variables (X) and dependent variable (Y) is expressed as a linear combination of parameters (coefficients).
+    - The coefficients (β) appear in the equation in a linear way: Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+    - These parameters are not raised to powers or modified by other functions.
+    - The variables themselves (X) can be non-linear (like X², log(X), etc.)
+    - For example: Y = β₀ + β₁X² is still a linear regression model because the coefficient β₁ is linear
+
+??? question "Explain the concept of correlation between features, its implications, and potential problems in machine learning models, particularly in regression."
+
+    - Measures linear relationship between variables
+    - Range: -1 to +1
+    - Shows how variables move together
+    - Problems with Correlated Features:
+        - Multicollinearity in regression
+        - Unstable coefficients
+        - Reduced model interpretability
+
 ## :octicons-code-24: Code 
 
 {% set repo_path = 'rokmr/Machine-Learning/blob/main/src/colab/LinearRegression.ipynb' %}

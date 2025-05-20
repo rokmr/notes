@@ -61,44 +61,6 @@ theme:
       primary: custom
       accent: lime
 
-nav:
-  - Home: index.md
-  - Machine Learning: 
-    - Machine Learning: ml/index.md
-    - Linear Regression: ml/LinearRegression.md
-    - Logistic Regression: ml/LogisticRegression.md
-    - Naive Bayes: ml/NaiveBayes.md
-  - Computer Vision: 
-    - Computer Vision: cv/index.md
-    - Object Detection: 
-      - Object Detection: cv/detection/index.md
-      - Selective Search: cv/detection/SelectiveSearch.md
-      - Overfeat: cv/detection/Overfeat.md 
-      - RCNNs: cv/detection/RCNN.md
-      - YOLO: cv/detection/YOLO.md
-      - RetinaNet: cv/detection/RetinaNet.md
-      - CornerNet: cv/detection/CornerNet.md
-      - CenterNet: cv/detection/CenterNet.md
-      - ExtremeNet: cv/detection/ExtremeNet.md
-      - DETR: cv/detection/DETR.md
-      - YOLO-World: cv/detection/YOLO-World.md
-    - Face Detection: 
-      - Face Detection: cv/faceDetection/index.md
-    - Pose Estimation:
-      - Pose Estimation: cv/poseEstimation/index.md
-    - Image Segmentation:
-      - Image Segmentatio: cv/segmentation/index.md
-      - DIS: cv/segmentation/DIS.md
-      - BiRefNet: cv/segmentation/BiRefNet.md 
-    - Optical Flow: 
-      - Optical Flow: cv/opticalFlow/index.md
-    - Object Tracking:
-      - Object Tracking: cv/objectTracking/index.md 
-    - NeRF:
-      - NeRF: cv/nerf/index.md
-  - Natural Language Processing:
-    - Natural Language Processing: nlp/index.md
-
 extra_css:
   - stylesheets/extra.css
 
@@ -157,3 +119,90 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
+
+
+nav:
+  - Home: 
+    - Home: index.md
+
+  - Basic: 
+    - Basic: basics/index.md
+    - Probability: basics/Probability.md
+    - Vector Calculus: basics/VectorCalculus.md
+    - Distance: basics/Distance.md
+    - Information Theory: basics/InfoTheory.md
+    - Bias & Variance: basics/BiasVar.md
+    - Activation: basics/Activation.md
+    - Loss: basics/Loss.md
+    - Optimization: basics/Optimization.md
+    - Scheduler: basics/Scheduler.md
+    - Regularization: basics/Regularization.md
+    - Attention: basics/Attention.md
+    - Position Encoding: basics/PositionEncoding.md
+    - Metric: basics/Metric.md
+    - Inference: basics/Inference.md
+    - Extra: basics/Extra.md
+
+  - Machine Learning: 
+    - Machine Learning: ml/index.md
+    - Linear Regression: ml/LinearRegression.md
+    - Logistic Regression: ml/LogisticRegression.md
+    - Naive Bayes: ml/NaiveBayes.md
+    - Dimensionality Reduction:
+      - Dimensionality Reduction: ml/dimReduction/index.md
+      - PCA: ml/dimReduction/PCA.md
+      - LDA: ml/dimReduction/LDA.md
+    - k-NN: ml/KNN.md
+    - Clustering:
+      - Clustering: ml/clustering/index.md
+      - k-Means: ml/clustering/KMeans.md
+      - DBSCAN: ml/clustering/DBSCAN.md
+      - HDBSCAN: ml/clustering/HDBSCAN.md
+      - Hierarchical Clustering: ml/clustering/HierarchicalClustering.md
+      - GMM: ml/clustering/GMM.md
+    - SVM: ml/SVM.md
+
+
+
+  - Computer Vision: 
+    - Computer Vision: cv/index.md
+
+    - CNN: 
+      - CNN: cv/cnn/index.md
+
+    - Object Detection: 
+      - Object Detection: cv/detection/index.md
+      - Selective Search: cv/detection/SelectiveSearch.md
+      - Overfeat: cv/detection/Overfeat.md 
+      - RCNNs: cv/detection/RCNN.md
+      - YOLO: cv/detection/YOLO.md
+      - RetinaNet: cv/detection/RetinaNet.md
+      - CornerNet: cv/detection/CornerNet.md
+      - CenterNet: cv/detection/CenterNet.md
+      - ExtremeNet: cv/detection/ExtremeNet.md
+      - DETR: cv/detection/DETR.md
+      - YOLO-World: cv/detection/YOLO-World.md
+
+    - Face Detection: 
+      - Face Detection: cv/faceDetection/index.md
+
+    - Pose Estimation:
+      - Pose Estimation: cv/poseEstimation/index.md
+
+    - Image Segmentation:
+      - Image Segmentatio: cv/segmentation/index.md
+      - DIS: cv/segmentation/DIS.md
+      - BiRefNet: cv/segmentation/BiRefNet.md 
+
+    - Optical Flow: 
+      - Optical Flow: cv/opticalFlow/index.md
+
+    - Object Tracking:
+      - Object Tracking: cv/objectTracking/index.md 
+
+    - NeRF:
+      - NeRF: cv/nerf/index.md
+
+
+  - Natural Language Processing:
+    - Natural Language Processing: nlp/index.md

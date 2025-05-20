@@ -34,15 +34,15 @@ The final performance of above systems heavily depends on the exact way these in
 ### Object detection set prediction loss
 DETR infers a fixed-size set of N predictions, in a single pass through the decoder, where N is set to be significantly larger than the typical number of objects in an image.
 
-$y:$ ground-truth ($y_i = (c_i, b_i)$, $c_i$ rget class label and $b_i \in [0,1]^4$ is ground-truth box.)
+- $y:$ ground-truth ($y_i = (c_i, b_i)$, $c_i$ target class label and $b_i \in [0,1]^4$ is ground-truth box.)
 
-$\hat{y} = \{\hat{y}_i\}_{i=1}^{N}:$ set of N predictions
+- $\hat{y} = \{\hat{y}_i\}_{i=1}^{N}:$ set of N predictions
 
-$y$ also as a set of size $N$ padded with $\varnothing$ (no object)
+- $y$ also as a set of size $N$ padded with $\varnothing$ (no object)
 
-Permutation of element with lowest cost:
+**Permutation of element with lowest cost**
 
-$\hat{\sigma} = \arg\min_{\sigma\in\mathfrak{G}_N} \sum_{i}^N \mathcal{L}_{\text{match}}(y_i, \hat{y}_{\sigma(i)})$
+- $\hat{\sigma} = \arg\min_{\sigma\in\mathfrak{G}_N} \sum_{i}^N \mathcal{L}_{\text{match}}(y_i, \hat{y}_{\sigma(i)})$
 
 **Pair-wise matching cost**
 
@@ -71,7 +71,7 @@ Since the transformer architecture is permutation-invariant, we supplement it wi
 
 **Transformer decoder**
 
-The difference with the original transformer is that our model decodes the N objects in parallel at each decoder layer, while Vaswani et al use an autoregressive model that predicts the output sequence one element at a time.
+The difference with the original transformer is that our model decodes the N objects in parallel at each decoder layer, while transformer use an autoregressive model that predicts the output sequence one element at a time.
 
 **Prediction feed-forward networks (FFNs)**
 

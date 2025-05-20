@@ -35,6 +35,25 @@ $Loss = -Likelihood$
 
 This loss penelizes much more than MSE when prediciton is wrong.
 
+## Optimization
+
+- $z^{(i)} = wx^{(i)} + b$
+    - $\frac{\partial z^{(i)}}{\partial w} = x^{(i)}$    
+- $\hat{y}^{(i)} = σ(z^{(i)}) = \frac{1}{1 + e^{-z^{(i)}}}$
+    - $\frac{\partial \hat{y}^{(i)}}{\partial z^{(i)}} = \hat{y}^{(i)}(1-\hat{y}^{(i)})$
+- ==$J(w,b) = -\frac{1}{m} \sum_{i=1}^m [y^{(i)} \log(\hat{y}^{(i)}) + (1-y^{(i)}) \log(1-\hat{y}^{(i)})]$==
+    - $\frac{\partial J}{\partial \hat{y}^{(i)}} = -\frac{1}{m} [\frac{y^{(i)}}{\hat{y}^{(i)}} - \frac{1-y^{(i)}}{1-\hat{y}^{(i)}}] = -\frac{1}{m} [\frac{y^{(i)} - \hat{y}^{(i)}}{\hat{y}^{(i)}(1-\hat{y}^{(i)})}]$
+- $\frac{\partial J}{\partial w} = \frac{\partial J}{\partial \hat{y}^{(i)}} \cdot \frac{\partial \hat{y}^{(i)}}{\partial z^{(i)}} \cdot \frac{\partial z^{(i)}}{\partial w}$
+
+- $\frac{\partial J}{\partial w} =  -\frac{1}{m} [\frac{y^{(i)} - \hat{y}^{(i)}}{\hat{y}^{(i)}(1-\hat{y}^{(i)})}] \cdot \hat{y}^{(i)}(1-\hat{y}^{(i)}) \cdot x^{(i)}$
+    - $\frac{\partial J}{\partial w} =  -\frac{1}{m} (y^{(i)} - \hat{y}^{(i)}) \cdot x^{(i)}$
+- ==$\frac{\partial J}{\partial w} = \frac{1}{m} \sum_{i=1}^m (\hat{y}^{(i)} - y^{(i)})x^{(i)}$==
+
+Similarly,
+
+- ==$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (\hat{y}^{(i)} - y^{(i)})$==
+
+
 ## Prediction
 Here, $pred = \frac{1}{1+ e^{-(wx+b)}}$, if $pred > \tau$ then class 1 else class 0.
 
@@ -52,6 +71,45 @@ $\tau$ is decided according to problem statement.
     where $f_{ij}(x)$ is the binary classifier for classes i and j, and $\mathbb{I}$ is the indicator function.
 
 3. **Mathematical:** Use softmax instead of sigmoid and use cross-entropy loss.
+
+## Question
+
+??? question "Why logistic regression is a classifier and not regression?"
+
+    - Logistic regression outputs probabilities between 0 and 1
+    - These probabilities are then converted to binary classes (0 or 1) using a threshold $\tau$
+
+??? question "Why do we use cross-entropy instead of mean square errors in logistic regression?"
+
+    - Cross-entropy gives larger gradients for wrong predictions, leading to faster and better learning, especially when predictions are far from actual values.
+
+??? question "How to extend the sigmoid function for multi-class classification?"
+
+    - By using softmax
+
+??? question "Suppose you have a logistic regression model as a black box. How can you determine the weights?"
+
+    - We can determine the weights using n+1 strategic queries (where n is the number of features).
+        - Finding Bias Term (b)
+            - First, input a zero vector (all features set to 0)
+            - The output will give us the bias term as there's no contribution from any weights
+        - Finding Individual Weights
+            - Use the columns of an identity matrix as inputs
+            - When we input [1,0,0,...], the output will reflect bias + weight1 and so on.
+
+??? question "BCE loss is convex function?"
+
+    - For Linear Model:
+        - BCE with respect to w and b is convex
+            - Sigmoid is monotonic
+            - Log loss is convex
+            - Composition maintains convexity here
+
+    - For Neural Networks:
+        - BCE is NOT convex
+            - Non-linear activation functions
+            - Multiple layers
+            - Complex compositions
 
 ## :octicons-code-24: Code
 
