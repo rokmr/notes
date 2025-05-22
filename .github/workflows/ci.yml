@@ -25,5 +25,8 @@ jobs:
           path: .cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - name: Set Jupyter Platform Dirs
+        run: |
+          echo "JUPYTER_PLATFORM_DIRS=1" >> $GITHUB_ENV
+      - run: pip install mkdocs-material mkdocs-glightbox
       - run: mkdocs gh-deploy --force

@@ -24,38 +24,34 @@ A supervised learning method used for:
 ### Feature Selection Measures
 
 **For Classification:**
+1. Gini Index: $\sum_{k=1}^K p̂_k(1-p̂_k)$
+   - Measures node purity
+   - Range: [0,0.5] for binary
+   - 0 = pure node, 0.5 = equal distribution
 
-- Gini Index: $\sum_{k=1}^K p̂_k(1-p̂_k)$
-      - Measures node purity
-      - Range: [0,0.5] for binary
-      - 0 = pure node, 0.5 = equal distribution
+2. Entropy: -$\sum_{k=1}^K p̂_k\log(p̂_k)$
+   - Measures information gain
+   - Range: [0,log(k)]
+   - 0 = pure node
 
-- Entropy: -$\sum_{k=1}^K p̂_k\log(p̂_k)$
-      - Measures information gain
-      - Range: [0,log(k)]
-      - 0 = pure node
-
-- Misclassification Error: 1 - max(p̂ᵢ)
-      - Less used in practice
-      - Not sensitive enough for tree growth
+3. Misclassification Error: 1 - max(p̂ᵢ)
+   - Less used in practice
+   - Not sensitive enough for tree growth
 
 **For Regression:**
 
 For region $R_j$,
-
 1. RSS (Residual Sum of Squares) : $RSS = \sum_{j=1}^J \sum_{i \in R_j} (y_i -\hat{y}_i)^2$
 2. MSE (Mean Squared Error) : $MSE = \frac{1}{N} \sum_{j=1}^J \sum_{i \in R_j} (y_i -\hat{y}_i)^2$
 3. MAE (Mean Absolute Error) : $MAE = \frac{1}{N} \sum_{j=1}^J \sum_{i \in R_j} |y_i -\hat{y}_i|$
 
 
 ### Building Process
-
 - Uses top-down, greedy approach (binary splitting)
 - At each step, makes locally optimal split
 - Prediction: Mean of response variable in each leaf
 
 **Splitting Process**
-
 1. For each feature:
    - For numerical: Find best splitting threshold
    - For categorical: 
@@ -68,7 +64,6 @@ For region $R_j$,
 
 
 **Algorithm Steps**
-
 1. Consider all predictors and possible cut points
 2. Calculate RSS for each potential split
 3. Select split with minimum RSS
@@ -76,7 +71,6 @@ For region $R_j$,
 
 
 **Stopping Criteria**
-
 1. Minimum samples at internal node
 2. Minimum samples at leaf node
 3. Maximum depth of tree
@@ -84,14 +78,12 @@ For region $R_j$,
 
 
 ### Pruning
-
 Cost complexity function:
 $\sum_{m=1}^{|T|} \sum_{i:x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$
 
 where $|T|$ is tree size and $\alpha$ is complexity parameter
 
 **Pruning Process**
-
 1. Grow maximum size tree
 2. Prune back using cost complexity
 
@@ -100,7 +92,6 @@ where $|T|$ is tree size and $\alpha$ is complexity parameter
 ## Advantages & Disadvantages
 
 **Advantages**
-
 - Interpretable and visualizable
 - Handles both numerical and categorical data
 - Minimal preprocessing needed
@@ -108,7 +99,6 @@ where $|T|$ is tree size and $\alpha$ is complexity parameter
 - Handles missing values well
 
 **Disadvantages**
-
 - High variance (unstable)
 - Prone to overfitting
 - Biased towards dominant classes
