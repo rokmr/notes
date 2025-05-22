@@ -63,6 +63,15 @@ $F1-score = \frac{2*PR}{P+R}$
 
 ## Micro F1 Vs macro F1
 
+## Mean Squared Error
+
+## R2 Score
+
+$R^2$ Score
+
+- range : [0, 1]
+- Having 1 is good model and 0 is bad model 
+
 ## Receiver Operating Characteristic (ROC)
 The ROC is a probability curve and the area under 
 the curve can be thought of as the degree of separability between the two classes. 

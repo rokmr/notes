@@ -2,7 +2,7 @@
 
 ## Convex and Concave function
 
-### Convex Functions
+**Convex Functions**
 
 A function $f(x)$ is convex if the line segment between any two points on the graph lies above or on the graph.
 
@@ -24,7 +24,7 @@ The graph ``curves upward``
         - $g$ is convex and non-increasing, $f$ is concave
     - Examples: $x^2$, $e^x$, $|x|$
 
-### Concave Functions
+**Concave Functions**
 
 A function $f(x)$ is concave if the line segment between any two points on the graph lies below or on the graph.
 
@@ -43,6 +43,34 @@ The graph ``curves downward``
     - Examples: $\log(x)$, $\sqrt{x}$, $-x^2$
 
 
-## Parametric vs Non-parametric model
+## Parametric and Non-parametric model
 
-## Generative vs Non-generative model
+**Parametric**
+
+- Makes strong assumptions about the data distribution
+- Has a fixed number of parameters
+- Linear Regression, Logistic Regression, Neural Networks, LDA
+
+
+**Non-parametric Model**
+
+- Makes fewer assumptions about data distribution
+- Number of parameters grows with training data
+- KNN, Decision Trees, Random Forests, SVM, Gaussian Processes
+
+## Generative and Non-generative model
+
+**Generative Model**
+
+- $P(Y|X) = P(X|Y)P(Y)/P(X)$
+- $Y^{\star} = argmax[P(X|Y)P(Y)]$
+    - $X$ : feature 
+    - $Y$ : class label
+    - $P(X|Y)$ : Likelihood
+- Naive Bayes, GMM, LDA, GANs, HMM
+
+**Non-generative Model**
+
+- Directly models $P(Y|X)$
+- $Y^{\star} = argmax[P(Y|X)]$
+- Logistic Regression, SVM, Decision Tree, Random Forest, Neural Network 

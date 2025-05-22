@@ -10,3 +10,51 @@
 .star {
   animation: heart 1000ms infinite;
 }
+
+/* Full Screen Width */
+@media only screen and (min-width: 76.25em) {
+  .md-main__inner {
+    max-width: none;
+  }
+  .md-sidebar--primary {
+    left: 0;
+  }
+  .md-sidebar--secondary {
+    right: 0;
+    margin-left: 0;
+    -webkit-transform: none;
+    transform: none;   
+  }
+}
+
+
+.md-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.md-header__inner {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.md-grid {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Theme Setup */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #5C6AC4;
+  --md-primary-bg-color: #FAFAFA;
+  --md-accent-fg-color: #9D91F9;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #AAB4F8;
+  --md-primary-bg-color: #121212;
+  --md-accent-fg-color: #9D91F9;
+}
+

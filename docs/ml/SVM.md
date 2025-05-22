@@ -1,140 +1,142 @@
-# Support Vector Machine (SVM)
+# SVM 
 
-- SVM is a supervised learning algorithm used for classification and regression tasks. 
-- SVM finds an optimal hyperplane that maximizes the margin between different classes in an N-dimensional space. While there may be multiple hyperplanes that can separate two classes of data points, SVM specifically aims to find the one with the maximum distance (margin) between the data points of both classes.
+**Support Vector Machine**
 
-## Mathematical Formulation
+- Used for both classification and regression tasks.
+- Core idea: Find optimal hyperplane that maximizes margin between classes.
 
-### Linear Model
-Let it be a binary classification with $y \in \{1, -1\}$
-<div align='center'>
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/SVM_margin.png/960px-SVM_margin.png', width=300, height=300>
-</div>
+## Geometric Interpretation
 
-$w \cdot x_i - b = 0$ (optimal hyperplane)
+- There are many hyperplanes that separate positive and negative points.
+- We want to find the margin-maximizing hyperplane.
+- Margin is the perpendicular distance between two hyperplanes $H^{+}$ and $H^{-}$.
+- As margin increases, generalization ability increases.
+- Points through which $H^{+}$ or $H^{-}$ pass are called support vectors.
 
-$w \cdot x_i - b \ge 1$ if $y_i = 1$    - (i)
+## Alternate Geometric Interpretation
 
-$w \cdot x_i - b \le 1$ if $y_i = -1$   - (ii)
+- Find the convex hull for positive and negative points.
+- Find the shortest line connecting these hulls.
+- The plane bisecting this line perpendicularly gives the margin maximizer.
 
-Combining (i) & (ii) we get
+## Derivation
 
-$y_i (w \cdot x_i - b) \ge 1$
+- $H$: Margin Maximizing hyperplane
+- $H$: $w^T x + b = 0$ 
+- $H^{+}$: $w^T x + b = 1$ (positive class boundary)
+- $H^{-}$: $w^T x + b = -1$ (negative class boundary)
+- Margin: $d = \frac{2}{||w||}$ (derived from geometric distance formula)
 
-**Hinge Loss**
+**Problem Statement**
 
-<div align='center'>
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hinge_loss_vs_zero_one_loss.svg/2560px-Hinge_loss_vs_zero_one_loss.svg.png', width=300, height=300>
-</div>
+- For linearly separable data:
+  - Find $w^{\star}$ and $b^{\star}$ such that $\frac{2}{||w||}$ is maximized
+  - Subject to: $y_i(w^T x_i + b) \ge 1 \text{  } \forall i$ 
+  - $w^{\star}, b^{\star} = \text{arg max}_{w,b} \frac{2}{||w||} = \text{arg min}_{w,b} \frac{||w||^2}{2}$
+
+- For non-linearly separable data:
+  - Introduce slack variables $\xi_i \ge 0$
+  - $\xi_i = 0$ for correctly classified points
+  - $\xi_i > 0$ measures violation of margin
+  - Objective: $w^{\star}, b^{\star} = \text{arg min}_{w,b} \frac{||w||^2}{2} + C \sum_i^N \xi_i$
+  - $C$: regularization parameter (higher $C$ → stricter margin)
 
 
-$L(y, \hat{y}) = max(0, 1 - y \cdot \hat{y})$
+## Loss minimization: Hinge Loss
 
-- The loss is 0 when prediction is correct (same sign as true label)
-- The loss increases linearly when prediction is incorrect.
-
-Now adding regularization to above, the final loss function becomes:
-
-$J(w,b) = \frac{1}{n}\sum_{i=1}^n max(0, 1 - y_i(w^T x_i + b)) + \frac{\lambda}{2}||w||^2$
-
-$\lambda$ is the regularization parameter
-
-Above equation can be seen as contrained optimization
-
-   - minimize: $\frac{1}{2}||w||^2$
-   - subject to: $y_i(w^T x_i + b) \geq 1$ for all $i$
+- $L_{hinge}(y_i, f(x_i))=\max(0, 1-y_i f(x_i))$ where $f(x_i) = w^T x_i + b$
+- When $y_i f(x_i) \ge 1$: Loss $= 0$ (correct classification with margin)
+- When $y_i f(x_i) < 1$: Loss $> 0$ (violation of margin)
+- Complete objective: $\mathcal{L} = \min_{w,b} \frac{1}{n}\sum_i^N \max(0, 1 - y_i(w^T x_i +b)) + \lambda ||w||^2$
 
 ### Optimization
-To optimize for above loss we need to compute gradient wrt to parameters and then update them.
+- Gradient descent can be used to minimize hinge loss
+- Challenging due to non-differentiability at $y_i(w^T x_i + b) = 1$
+- Sub-gradients are used at non-differentiable points
+
+**Gradient Computation:**
 
 $\frac{\partial J}{\partial w} = \lambda w - \frac{1}{n}\sum_{i=1}^n y_i x_i \cdot I(y_i(w^T x_i + b) < 1)$
 
 $\frac{\partial J}{\partial b} = -\frac{1}{n}\sum_{i=1}^n y_i \cdot I(y_i(w^T x_i + b) < 1)$
 
-where,  $I()$ is the indicator function.
+where $I()$ is the indicator function.
 
 **Gradient Updates:**
 
-1. No misclassification ($y_i(w^T x_i + b) \geq 1$):
-   $w = w - \eta \lambda w$
+1. For points outside margin ($y_i(w^T x_i + b) \geq 1$):
+   - Only regularization affects update
+   - $w = w - \eta \lambda w$
+   - $b$ remains unchanged
 
-
-2. Misclassification ($y_i(w^T x_i + b) < 1$):
-
-   $w = w - \eta(\lambda w - y_i x_i)$
-   $b = b - \eta(-y_i)$
+2. For margin violations ($y_i(w^T x_i + b) < 1$):
+   - Both loss and regularization affect update
+   - $w = w - \eta(\lambda w - y_i x_i)$
+   - $b = b + \eta y_i$
 
 where $\eta$ is the learning rate.
 
+## Dual form of SVM
 
-### Dual Form
+**Primal**
+$\min_{w,b,\xi} \frac{||w||^2}{2} + C \sum_i^N \xi_i$
+subject to: $y_i(w^T x_i + b) \ge 1 - \xi_i$ and $\xi_i \ge 0$ $\forall i$
 
-The dual form of the optimization problem is:
+**Dual**
+$\max_{\alpha} \sum_i^N \alpha_i - \frac{1}{2}\sum_i \sum_j \alpha_i \alpha_j y_i y_j x_i^T x_j$
+subject to: $\sum_i^N \alpha_i y_i = 0$ and $0 \le \alpha_i \le C$ $\forall i$
 
-For classification:
+## Kernel SVM
 
-maximize: $\sum_{i=1}^n \alpha_i - \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \alpha_i \alpha_j y_i y_j x_i^T x_j$
+- For non-linearly separable data in input space, map to higher dimensional feature space
+- Explicit mapping φ(x) is computationally expensive
+- Kernel trick: K(x,y) = φ(x)ᵀφ(y)
+- Replace dot products with kernel function in dual form
 
-subject to: 
+**Dual form with Kernel**
+$\max_{\alpha} \sum_i^N \alpha_i - \frac{1}{2}\sum_i \sum_j \alpha_i \alpha_j y_i y_j K(x_i,x_j)$
+subject to: $\sum_i^N \alpha_i y_i = 0$ and $0 \le \alpha_i \le C$
 
-- $\sum_{i=1}^n \alpha_i y_i = 0$
+**Prediction**
+$f(x) = \text{sign}(\sum_i \alpha_i y_i K(x_i,x) + b)$
 
-- $\alpha_i \geq 0$ for all $i$
+### Mercer's Theorem
 
-The dual form is particularly useful because:
+- Kernel $K(x,y)$ is valid if and only if:
+  1. Symmetric: $K(x,y) = K(y,x)$
+  2. Positive semi-definite: $\int\int K(x,y)g(x)g(y)dxdy \ge 0$ for all g
+- Ensures existence of feature space mapping $\phi$
+- Guarantees convergence of kernel optimization
 
-- It allows us to use the kernel trick
-- Only support vectors (points with $\alpha_i > 0$) contribute to the decision boundary
-- It's often more efficient to solve than the primal form
+### Common Kernels
 
+**Linear Kernel**
 
-### Kernel Trick
-For non-linear classification and regression, we can use kernel functions to implicitly map data to higher dimensions without explicitly computing the transformation:
+- $K(x,y) = x^T y$
+- Equivalent to no transformation
+- Used when data is linearly separable
 
-Common kernels:
+**Polynomial Kernel**
 
-- Linear: $K(x,y) = x^T y$
-- Polynomial: $K(x,y) = (x^T y + 1)^d$ where $d$ is the degree of the polynomial kernel.
-- RBF: $K(x,y) = exp(-\gamma ||x-y||^2)$,  where $\gamma = \frac{1}{2\sigma^2}$ is the inverse of twice the variance of the Gaussian distribution. 
+- $K(x,y) = (\gamma x^Ty + r)^d$
+- Parameters: degree $d$, $\gamma > 0, r \ge 0$
+- Maps to space of polynomials up to degree d
+- Captures feature interactions
 
-The kernel trick works because:
+**RBF (Gaussian) Kernel**
 
-- It allows us to compute dot products in high-dimensional space without explicitly mapping to that space
-- It's computationally efficient
-- It enables SVM to find non-linear decision boundaries and regression functions
-
-### Soft Margin SVM
-
-For non-linearly separable data, we introduce slack variables $\xi_i$ to allow some misclassification:
-
-minimize: $\frac{1}{2}||w||^2 + C\sum_{i=1}^n \xi_i$
-
-subject to: $y_i(w^T x_i + b) \geq 1 - \xi_i$ for all $i$
-
-where:
-- $\xi_i$ represents how far a point is from its correct margin
+- $K(x,y) = exp(-\gamma||x-y||^2)$
+- Parameter: $\gamma > 0$ controls spread
+- Maps to infinite dimensional space
+- Most commonly used for non-linear data
+- $\gamma$ large $\rightarrow$ high variance, low bias
+- $\gamma$ small $\rightarrow$ low variance, high bias
 
 ## Inference
 
-- $f(x) = sign(w \cdot x - b)$
+- $f(x) = \text{sign}(\sum_{i \in SV} \alpha_i y_i K(x_i,x) + b)$
+- Computational cost depends on number of SVs
 
-- $f(x) = sign(\sum(\alpha_i y_i K(x_i, x)) - b)$
-
-## Advantages
-- Excellent for high-dimensional data where dimensions > number of samples
-- Creates clear decision boundaries through max-margin classification
-- Memory efficient by only storing support vectors
-- Versatile through kernel functions for non-linear classification and regression
-- Good generalization due to margin maximization
-- Robust to outliers in regression tasks
-
-## Disadvantages
-- Performs poorly with overlapping classes due to difficulty in finding clear margins
-- Does not provide direct probability estimates (requires N-fold cross-validation)
-- Computationally expensive for large datasets
-- Requires careful feature scaling
-- Memory requirements grow with the number of support vectors
-- Sensitive to the choice of kernel parameters
 
 ## :octicons-code-24: Code
 

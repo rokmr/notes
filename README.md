@@ -15,3 +15,7 @@ mkdocs serve
 mkdocs build
 mkdocs gh-deploy --force
 ```
+
+```bash
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
+```

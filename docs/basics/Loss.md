@@ -24,7 +24,7 @@
 
 ## Hinge Loss
 - `SVM Classification`
-- $L_{hinge}=\max(1-\hat{y} \cdot y)$
+- $L_{hinge}=\max(0, 1-\hat{y} \cdot y)$
 - **Properties**
     - Robust to outliers
     - Used in maximum-margin classification

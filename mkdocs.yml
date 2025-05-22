@@ -52,7 +52,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-      primary: blue
+      primary: custom
       accent: lime
     - scheme: slate 
       toggle:
@@ -131,12 +131,13 @@ nav:
     - Vector Calculus: basics/VectorCalculus.md
     - Distance: basics/Distance.md
     - Information Theory: basics/InfoTheory.md
+    - Feature Engineering: basics/FeatureEngg.md
     - Bias & Variance: basics/BiasVar.md
+    - Regularization: basics/Regularization.md
     - Activation: basics/Activation.md
     - Loss: basics/Loss.md
     - Optimization: basics/Optimization.md
     - Scheduler: basics/Scheduler.md
-    - Regularization: basics/Regularization.md
     - Attention: basics/Attention.md
     - Position Encoding: basics/PositionEncoding.md
     - Metric: basics/Metric.md
@@ -161,6 +162,8 @@ nav:
       - Hierarchical Clustering: ml/clustering/HierarchicalClustering.md
       - GMM: ml/clustering/GMM.md
     - SVM: ml/SVM.md
+    - Decision Tree: ml/DecisionTree.md
+    - Ensemble: ml/Ensemble.md
 
 
 
