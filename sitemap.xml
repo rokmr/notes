@@ -2,290 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rokmr.github.io/notes/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Activation/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Attention/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/BiasVar/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://rokmr.github.io/notes/basics/CICD/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Distance/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Extra/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://rokmr.github.io/notes/basics/FastAPI/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/FeatureEngg/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://rokmr.github.io/notes/basics/GithubAction/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Inference/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/InfoTheory/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Loss/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/MLEMAE/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Metric/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Optimization/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/PositionEncoding/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Probability/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Regularization/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/Scheduler/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/VectorCalculus/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/basics/bayesian/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/casestudy/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/classification/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/cnn/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/CenterNet/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/CornerNet/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/DETR/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/DINO/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/ExtremeNet/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/InternImage/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/OWL/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/Overfeat/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/RCNN/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/RetinaNet/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/SSD/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/SelectiveSearch/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/SwinTransformer/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/YOLO-World/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/YOLO/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/detection/YOLOE/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/faceDetection/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/nerf/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/objectTracking/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/objectTracking/BipartiteMatching/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/objectTracking/KalmanFilter/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/opticalFlow/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/poseEstimation/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/segmentation/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/segmentation/BiRefNet/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/cv/segmentation/DIS/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/DTQn/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/DecisionTree/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/Ensemble/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/KNN/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/LinearRegression/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/LogisticRegression/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/MATH/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/NaiveBayes/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/SVM/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/TODO/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/DBSCAN/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/GMM/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/HDBSCAN/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/HierarchicalClustering/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/clustering/KMeans/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/dimReduction/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/dimReduction/LDA/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/ml/dimReduction/PCA/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://rokmr.github.io/notes/nlp/</loc>
-         <lastmod>2025-05-22</lastmod>
+         <lastmod>2025-05-24</lastmod>
     </url>
 </urlset>
