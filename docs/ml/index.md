@@ -10,9 +10,7 @@
 - [x] k-means Clustering
 - [x] Support Vector Machine (SVM)
 - [ ] Decision Tree
-- [ ] Random Forest
-- [ ] Boosting Trees
-- [ ] Adaboost
+- [ ] Ensemble Method
 - [ ] Perceptron
 - [ ] Neural Network
 - [ ] Convolutional Neural Network (CNN)

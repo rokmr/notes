@@ -81,6 +81,10 @@ plugins:
       minify_html: true
   - macros
 
+  # - macros:
+  #     include_dir: macros
+  #     modules: []
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -209,3 +213,19 @@ nav:
 
   - Natural Language Processing:
     - Natural Language Processing: nlp/index.md
+
+  - MLOPs:
+    - MLOPs: mlops/index.md
+    - Pydantic: mlops/Pydantic.md
+    - AsyncIO: mlops/Async.md
+    - API: mlops/API.md
+    - FastAPI: mlops/FastAPI.md
+    - Docker: mlops/Docker.md
+    - CI/CD: mlops/CI-CD.md
+    - GitHub Actions: mlops/GitHubActions.md
+
+  - Notebooks:
+    - Notebooks: notebooks/index.md
+    - Pydantic: notebooks/pydantic.ipynb
+    - LangGraph: notebooks/langgraph.ipynb
+    - RAGAgent: notebooks/ragagent.ipynb
